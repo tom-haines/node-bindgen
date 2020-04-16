@@ -732,8 +732,6 @@ pub const napi_status_napi_queue_full: napi_status = 15;
 pub const napi_status_napi_closing: napi_status = 16;
 pub const napi_status_napi_bigint_expected: napi_status = 17;
 pub const napi_status_napi_date_expected: napi_status = 18;
-pub const napi_status_napi_arraybuffer_expected: napi_status = 19;
-pub const napi_status_napi_detachable_arraybuffer_expected: napi_status = 20;
 pub type napi_status = u32;
 pub type napi_callback = ::std::option::Option<
     unsafe extern "C" fn(env: napi_env, info: napi_callback_info) -> napi_value,
