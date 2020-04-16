@@ -7,3 +7,4 @@ target-docker
 dist
 dylib
 .vscode
+**/Cargo.lock

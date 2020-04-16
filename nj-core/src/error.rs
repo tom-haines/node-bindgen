@@ -103,8 +103,6 @@ pub enum NapiStatus {
     Closing = crate::sys::napi_status_napi_closing as isize,
     BigintExpected = crate::sys::napi_status_napi_bigint_expected as isize,
     DateExpected = crate::sys::napi_status_napi_date_expected as isize,
-    ArraybufferExpected = crate::sys::napi_status_napi_arraybuffer_expected as isize,
-    DetachableArrayBufferExpected = crate::sys::napi_status_napi_detachable_arraybuffer_expected as isize
 }
 
 impl From<napi_status> for NapiStatus {
@@ -132,8 +130,6 @@ impl From<napi_status> for NapiStatus {
             crate::sys::napi_status_napi_closing => Self::Closing,
             crate::sys::napi_status_napi_bigint_expected => Self::BigintExpected,
             crate::sys::napi_status_napi_date_expected => Self::DateExpected,
-            crate::sys::napi_status_napi_arraybuffer_expected => Self::ArraybufferExpected,
-            crate::sys::napi_status_napi_detachable_arraybuffer_expected  => Self::DetachableArrayBufferExpected,
             _ => panic!("cannot convert: {}",status)
 
         }
