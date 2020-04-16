@@ -8,9 +8,9 @@ use node_bindgen::derive::node_bindgen;
 #[node_bindgen]
 async fn hello<F: Fn(f64,String)>( seconds: i32, cb: F) {
         
-  //  println!("sleeping");
+    println!("sleeping");
     sleep(Duration::from_secs(seconds as u64)).await;
-//    println!("woke from time");
+    println!("woke from time");
 
     cb(10.0,"hello world".to_string());
 
